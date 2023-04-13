@@ -1,0 +1,26 @@
+name: profiler_symbolizer
+title: Universal Profiling Symbolizer
+version: 0.1.0-PRERELEASE
+categories: ["elastic_stack", "monitoring"]
+description: Fleet-wide, whole-system, continuous profiling with zero instrumentation.
+conditions:
+  kibana.version: ^8.8.0
+  elastic.subscription: basic
+format_version: 1.1.0
+icons:
+  - size: 48x46
+    src: /img/profiler-logo-color-48px.svg
+    type: image/svg+xml
+    title: Universal Profiling Logo
+policy_templates:
+  - name: Universal Profiling Symbolizer
+    title: Universal Profiling Symbolization Service
+    description: Interact with Universal Profiling.
+    inputs:
+      - title: Collect Universal Profiling traces
+        description: Collect Universal Profiling traces
+        type: pf-elastic-symbolizer
+    multiple: false
+type: integration
+owner:
+  github: elastic/profiling
